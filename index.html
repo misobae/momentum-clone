@@ -6,15 +6,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Momentum App</title>
   <link rel="stylesheet" href="./style.css">
+  <script defer src="./todo.js"></script>
   <script defer src="./greetings.js"></script>
   <script defer src="./clock.js"></script>
+  <script defer src="./quotes.js"></script>
+  <script defer src="./background.js"></script>
+  <script defer src="./api_key.js"></script>
+  <script defer src="./weather.js"></script>
 </head>
 <body>
-  <form class="hidden" id="login-form">
-    <input required maxlength="15" type="text" placeholder="What is your name?">
-    <button>Log In</button>
-  </form>
-  <h2 id="clock"></h2>
-  <h1 id="greeting" class="hidden"></h1>
+    <div class="center-box">
+      <form class="hidden" id="login-form">
+        <p>Hello, what's your name?</p>
+        <input required maxlength="10" type="text">
+      </form>
+    </div>
+  <div class="center-box higher">
+    <h2 class="hidden" id="clock"></h2>
+    <h1 id="greeting" class="hidden"></h1>
+  </div>
+
+  <div class="todo-container hidden">
+    <form id="todo-form">
+      <p>What is your main focus for today?</p>
+      <input type="text">
+    </form>
+    <ul id="todo-list"></ul>
+  </div>
+
+
+  <div id="quote">
+    <span></span>
+    <span></span>
+  </div>
+
+  <div id="weatherContainer">
+    <span id="weather"></span>
+    <div id="city"></div>
+  </div>
 </body>
 </html>
